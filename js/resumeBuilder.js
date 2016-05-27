@@ -1,4 +1,4 @@
-//Bio object to iterate through.
+  //Bio object to iterate through.
   var bio = {
     "role": "Web Developer",
     "name": "Rich Armstrong",
@@ -18,7 +18,7 @@
     },
   };
 
-//education object with nested array.
+  //education object with nested array.
   var education = {
     "schools": [{
       "name": "Sachem High Scool",
@@ -43,7 +43,7 @@
     },
   };
 
-//work oject.
+  //work oject.
   var work = {
     "jobs": {
       "employer": "Friedman Law Associates PC",
@@ -54,7 +54,7 @@
     },
   };
 
-//projects object.
+  //projects object.
   var projects = {
     "projects": {
       "title": "Site Portfolio",
@@ -64,6 +64,7 @@
     },
   };
 
+  //bio variables to be appended.
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
   var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -77,6 +78,7 @@
   var formattedSkilltwo = HTMLskills.replace("%data%", bio.skills.two);
   var formattedSkillthree = HTMLskills.replace("%data%", bio.skills.three);
 
+  //bio variables to be appended.
   var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs.employer)
   var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs.title);
   var formattedEmployerTitle = formattedEmployer + formattedTitle;
@@ -84,14 +86,16 @@
   var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs.location);
   var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs.description);
 
+  //school variables to be appended.
   var formattedOlName = HTMLonlineTitle.replace("%data%", education.onlineCourses.title);
   var formattedOlSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses.school);
   var formattedOlDate = HTMLonlineDates.replace("%data%", education.onlineCourses.date);
   var formattedOlURL = HTMLonlineURL.replace("%data%", education.onlineCourses.url);
 
+  //projects variables to be appended.
   var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects.title);
   var formattedDates = HTMLprojectDates.replace("%data%", projects.projects.dates);
-  var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects.description);
+  var formattedProDescription = HTMLprojectDescription.replace("%data%", projects.projects.description);
   var formattedImage = HTMLprojectImage.replace("%data%", projects.projects.images);
 
   bio.display = function() {
@@ -165,7 +169,7 @@
     $("#projects").append(HTMLprojectStart);
     $(".project-entry:last").append(formattedTitle);
     $(".project-entry:last").append(formattedDates);
-    $(".project-entry:last").append(formattedDescription);
+    $(".project-entry:last").append(formattedProDescription);
     $(".project-entry:last").append(formattedImage);
   };
   projects.display();
