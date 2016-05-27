@@ -61,6 +61,11 @@ h5 {
 
 }
 
+.pImage {
+  width: 35%;
+  height: auto;
+}
+
 
 .date-text {
   font-style: italic;
