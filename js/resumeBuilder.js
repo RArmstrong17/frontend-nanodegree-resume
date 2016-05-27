@@ -79,7 +79,7 @@
   var formattedSkillthree = HTMLskills.replace("%data%", bio.skills.three);
 
   //bio variables to be appended.
-  var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs.employer)
+  var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs.employer);
   var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs.title);
   var formattedEmployerTitle = formattedEmployer + formattedTitle;
   var formattedDates = HTMLworkDates.replace("%data%", work.jobs.dates);
@@ -125,7 +125,7 @@
           $("#skills").append(formattedSkilltwo);
           $("#skills").append(formattedSkillthree);
       }
-    };
+    }
   };
   bio.display();
 
@@ -153,15 +153,15 @@
           $(".education-entry:last").append(formattedEducLocation);
           var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[k].majors);
           $(".education-entry:last").append(formattedMajor);
-        };
+        }
       } else if (key === "onlineCourses") {
         $(".education-entry:last").append(HTMLonlineClasses);
         $(".education-entry:last").append(formattedOlName);
         $(".education-entry:last").append(formattedOlSchool);
         $(".education-entry:last").append(formattedOlDate);
         $(".education-entry:last").append(formattedOlURL);
-      };
-    };
+      }
+    }
   };
   education.display();
 
